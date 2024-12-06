@@ -32,14 +32,22 @@
 
 # Managing a List with a WHILE Loop
     
-temperature = int(input("Please enter a temperature in degrees F(-9999 to quit): \n"))
-length = []
-while not temperature == -9999:
+temperature = 0
+temperatures = []
+
+#while not temperature == -9999:
+while temperature != -9999:
     temperature = int(input("Please enter a temperature in degrees F (-9999 to quit):\n"))
-    length.append(temperature)
-if len(length) > 0:
-    print(f'Temperatures entered: {length}')
-    average_temp = sum(length) / len(length)
+    if temperature == -9999:
+        break
+    else:
+        temperatures.append(temperature)
+
+
+
+if len(temperatures) > 0:
+    print(f'Temperatures entered: {temperatures}')
+    average_temp = sum(temperatures) / len(temperatures)
     print(f'average temperature {average_temp}')
 else:
     print("No temperatures were entered")
